@@ -1,7 +1,5 @@
 # Alma Alviana - Portfolio Website
 
-[English](README.md) | [简体中文](README.zh-CN.md)
-
 A modern, minimalist portfolio website for Alma Alviana - Product Specialist & iOS Developer. Built with Astro and enhanced with liquid glass design elements.
 
 🎂 **A birthday present from [Kenanfir](https://github.com/Kenanfir) to Alma** 🎂
