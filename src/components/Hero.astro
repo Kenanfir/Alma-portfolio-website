@@ -1,0 +1,70 @@
+---
+import Scene3D from "./Scene3D";
+---
+
+<section
+  class="relative min-h-screen flex items-center justify-center overflow-hidden"
+>
+  <div class="absolute inset-0 z-0">
+    <Scene3D client:load />
+  </div>
+
+  <div class="container mx-auto px-4 z-20 relative">
+    <div class="max-w-4xl mx-auto text-center">
+      <!-- Main content card with glassmorphism -->
+      <div
+        class="glass-strong glass-hover rounded-3xl p-8 mb-8 animate-fade-in animate-float"
+      >
+        <div class="flex flex-col items-center mb-8">
+          <div
+            class="w-32 h-32 rounded-full border-4 border-white/30 shadow-2xl mb-6 overflow-hidden glass-subtle animate-glow"
+          >
+            <img
+              src="https://media.licdn.com/dms/image/v2/D5603AQF37trAB764Rg/profile-displayphoto-scale_400_400/B56ZjXbsAhH8Ag-/0/1755961018270?e=1761177600&v=beta&t=9zT9mhptA0qWSP4ga60wbO1O84252UFcsbVlytwsPRk"
+              alt="Alma Alviana Profile"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <h1 class="text-6xl font-bold mb-2 text-gray-800">Alma Alviana</h1>
+          <h2 class="text-3xl text-gray-700 mb-6 font-light">
+            Product Specialist | iOS Developer
+          </h2>
+        </div>
+        <p
+          class="text-xl text-gray-600 mb-8 animate-slide-up max-w-3xl mx-auto leading-relaxed"
+        >
+          Chemistry graduate passionate about project and product management.
+          With extensive experience in collaborating with cross-functional
+          teams, I excel in bridging technical expertise with strategic business
+          goals. I conduct market research, data analysis, and user surveys to
+          define product visions and roadmaps, manage product lifecycles, and
+          prioritize features based on business value and user needs.
+        </p>
+        <div
+          class="flex gap-4 justify-center animate-slide-up flex-wrap"
+          style="animation-delay: 200ms;"
+        >
+          <a
+            href="/projects"
+            class="glass glass-hover text-gray-800 px-8 py-4 rounded-full font-medium hover:scale-105 transition-all duration-300"
+          >
+            View My Work
+          </a>
+          <!-- <a
+            href="#contact"
+            class="glass-subtle glass-hover text-gray-800 px-8 py-4 rounded-full font-medium hover:scale-105 transition-all duration-300"
+          >
+            Get in Touch
+          </a> -->
+          <a
+            href="https://www.linkedin.com/in/almaalviana/"
+            target="_blank"
+            class="glass glass-hover text-gray-800 px-8 py-4 rounded-full font-medium hover:scale-105 transition-all duration-300"
+          >
+            Connect on LinkedIn
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

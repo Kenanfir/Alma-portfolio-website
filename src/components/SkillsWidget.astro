@@ -1,0 +1,55 @@
+---
+interface Skill {
+  name: string;
+  level: "Expert" | "Advanced" | "Intermediate";
+  icon: string;
+}
+
+const skills: Skill[] = [
+  { name: "Product Management", level: "Expert", icon: "📊" },
+  { name: "iOS Development", level: "Advanced", icon: "📱" },
+  { name: "Swift", level: "Advanced", icon: "🦉" },
+  { name: "Market Research", level: "Expert", icon: "🔍" },
+  { name: "Data Analysis", level: "Advanced", icon: "📈" },
+  { name: "Customer Relationship Management", level: "Expert", icon: "🤝" },
+  { name: "Team Leadership", level: "Expert", icon: "👥" },
+  { name: "Quality Assurance", level: "Advanced", icon: "✅" },
+  { name: "Project Management", level: "Expert", icon: "📋" },
+  { name: "User Experience", level: "Advanced", icon: "🎨" },
+  { name: "UI/UX Design", level: "Advanced", icon: "🎨" },
+  { name: "Product Training", level: "Expert", icon: "🎓" },
+  { name: "Community Management", level: "Expert", icon: "🌐" },
+  { name: "Event Management", level: "Advanced", icon: "📅" },
+  { name: "Mentoring", level: "Expert", icon: "👨‍🏫" },
+];
+
+const levelColors = {
+  Expert: "bg-blue-100 text-blue-700",
+  Advanced: "bg-green-100 text-green-700",
+  Intermediate: "bg-yellow-100 text-yellow-700",
+};
+---
+
+<div class="glass-strong glass-hover rounded-3xl p-8 shadow-xl animate-float">
+  <h3 class="text-2xl font-semibold mb-6 text-gray-800">Skills</h3>
+  <div class="space-y-4">
+    {
+      skills.map((skill, index) => (
+        <div
+          class="flex items-center justify-between p-4 glass-subtle glass-hover rounded-xl transition-all duration-300 hover:scale-[1.02]"
+          style={`animation-delay: ${index * 0.1}s;`}
+        >
+          <div class="flex items-center gap-4">
+            <span class="text-2xl">{skill.icon}</span>
+            <span class="font-medium text-gray-800">{skill.name}</span>
+          </div>
+          <span
+            class={`px-4 py-2 rounded-full text-sm font-semibold glass-subtle text-gray-800 border border-gray-300`}
+          >
+            {skill.level}
+          </span>
+        </div>
+      ))
+    }
+  </div>
+</div>

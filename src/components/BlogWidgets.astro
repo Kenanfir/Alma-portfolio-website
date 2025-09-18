@@ -1,0 +1,67 @@
+---
+interface VolunteerExperience {
+  title: string;
+  organization: string;
+  period: string;
+  description: string;
+  category: string;
+}
+
+const volunteerExperiences: VolunteerExperience[] = [
+  {
+    title: "Community Engagement Officer",
+    organization: "WEWAW Indonesia",
+    period: "Jul 2024 - Present",
+    description:
+      "Leading community engagement initiatives and educational programs focused on women's empowerment and social impact.",
+    category: "Education",
+  },
+  {
+    title: "Project Team Lead",
+    organization: "Gelora Karsa Muda Nusantara",
+    period: "Apr 2024",
+    description:
+      "Led a social services project team, coordinating volunteer activities and community outreach programs.",
+    category: "Social Services",
+  },
+];
+---
+
+<div class="glass-strong glass-hover rounded-3xl p-8 shadow-xl animate-float">
+  <div class="md:flex justify-between items-center mb-6">
+    <h3 class="text-2xl font-semibold text-gray-800">Volunteer Experience</h3>
+    <span class="text-gray-700 text-sm glass-subtle px-4 py-2 rounded-full">
+      Making a Difference
+    </span>
+  </div>
+  <div class="space-y-6">
+    {
+      volunteerExperiences.map((experience, index) => (
+        <article class="group">
+          <div
+            class="block glass glass-hover p-6 rounded-2xl transition-all duration-300 hover:scale-[1.02]"
+            style={`animation-delay: ${index * 0.2}s;`}
+          >
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-3">
+              <span class="px-3 py-1 glass-subtle text-gray-700 rounded-full text-xs font-medium w-fit border border-gray-300">
+                {experience.category}
+              </span>
+              <div class="flex items-center gap-2 text-gray-600 text-sm">
+                <span>{experience.period}</span>
+              </div>
+            </div>
+            <h4 class="text-lg font-medium text-gray-800 mb-2 group-hover:text-gray-600 transition-colors">
+              {experience.title}
+            </h4>
+            <p class="text-gray-600 text-sm mb-2 font-medium">
+              {experience.organization}
+            </p>
+            <p class="text-gray-600 text-sm line-clamp-2">
+              {experience.description}
+            </p>
+          </div>
+        </article>
+      ))
+    }
+  </div>
+</div>

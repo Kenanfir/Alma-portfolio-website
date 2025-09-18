@@ -1,0 +1,237 @@
+---
+interface Experience {
+  title: string;
+  company: string;
+  period: string;
+  description: string[];
+  technologies: string[];
+}
+
+interface Education {
+  degree: string;
+  school: string;
+  period: string;
+  achievements: string[];
+}
+
+const experiences: Experience[] = [
+  {
+    title: "Junior iOS Developer",
+    company: "Apple Developer Academy at BINUS",
+    period: "Mar 2025 - Present",
+    description: [
+      "Developing iOS applications using Swift and modern iOS frameworks",
+      "Collaborating with cross-functional teams in an intensive development program",
+      "Learning and implementing Apple's latest technologies and best practices",
+    ],
+    technologies: ["Swift", "iOS", "Xcode", "UIKit", "SwiftUI"],
+  },
+  {
+    title: "Product Specialist",
+    company: "PT GEMA SCIENTIFIC PERDANA",
+    period: "Aug 2024 - Feb 2025",
+    description: [
+      "Facilitated customer training to streamline implementation processes for academia, healthcare, and environmental sectors",
+      "Managed administrative processes ensuring 100% compliance with documentation standards",
+      "Strengthened client relationships, driving 20% increase in retention and reducing complaints by 40%",
+    ],
+    technologies: [
+      "Product Training",
+      "CRM",
+      "Customer Support",
+      "Documentation",
+    ],
+  },
+  {
+    title: "Marketing and Supply Chain Management Intern",
+    company: "Tradeasia International",
+    period: "Jul 2024 - Oct 2024",
+    description: [
+      "Conducted comprehensive market research across South East Asia for 9 Strategic Business Units",
+      "Delivered monthly market analysis including performance tracking and competitor benchmarking",
+      "Analyzed trends, competitor activities, and customer behavior to assess market conditions",
+    ],
+    technologies: ["Market Research", "Data Analysis", "CRM", "Lead Nurturing"],
+  },
+  {
+    title: "Biochemistry Laboratory Assistant",
+    company: "Universitas Indonesia (UI)",
+    period: "Sep 2022 - Dec 2022",
+    description: [
+      "Guided 9 students in experiments and analyses using laboratory equipment under the established practicum module",
+      "Maintained safety protocols and quality control measures to uphold laboratory standards",
+      "Conducted weekly assessments and comprehensive reports to practicum supervisors",
+    ],
+    technologies: [
+      "Data Analysis",
+      "Mentoring",
+      "Laboratory Management",
+      "Quality Control",
+    ],
+  },
+  {
+    title: "Leader of Product Service and Testing",
+    company: "PT. Sinar Perempuan Indonesia (Female In Action)",
+    period: "Oct 2021 - Aug 2022",
+    description: [
+      "Led 6-person Customer Service team and 4-person Data Recap team, achieving 90% customer satisfaction",
+      "Resolved user issues with cross-functional teams, attaining 95% success rate",
+      "Managed FIA Apps pre-trial project, improving app stability by 35% and reducing bug-related delays by 20%",
+      "Developed comprehensive User Manuals and FAQs, reducing user support queries by 40%",
+    ],
+    technologies: [
+      "Product Management",
+      "Team Leadership",
+      "Quality Assurance",
+      "User Experience",
+    ],
+  },
+  {
+    title: "PIC of Community Development",
+    company: "PT. Sinar Perempuan Indonesia (Female In Action)",
+    period: "Jan 2021 - Oct 2021",
+    description: [
+      "Responsible for receiving activities and leading the team and reporting progress every month",
+      "Built relationships with various activities and offers for Female in Action members to develop communication and get bigger members",
+      "Provided education and training in Onboarding for new interns regarding member management and member activities",
+      "Formed a volunteer team from Female in Action members and became mentors in making the book 'Aku dan Perjuanganku'",
+    ],
+    technologies: [
+      "Communication",
+      "Training",
+      "Community Management",
+      "Leadership",
+    ],
+  },
+  {
+    title: "Community Development",
+    company: "PT. Sinar Perempuan Indonesia (Female In Action)",
+    period: "May 2020 - Dec 2020",
+    description: [
+      "Managed to hold webinars attended by approximately 100-500 people each month by researching the latest topics, compiling Terms of Reference, making timelines, and managing audiences and resource persons",
+      "Responsible as the contact person for Female in Action members of the community in more than 10 Whatsapp and 1 Telegram discussion groups",
+    ],
+    technologies: [
+      "Collaborative Problem Solving",
+      "Group Training",
+      "Event Management",
+      "Community Engagement",
+    ],
+  },
+];
+
+const education: Education[] = [
+  {
+    degree: "Product Management Certificate",
+    school: "Rakamin Academy",
+    period: "Mar 2024 - Jul 2024",
+    achievements: [
+      "Grade: 82.2/100",
+      "Rank 7 in Top 10 Most Outstanding Students",
+      "Specialized in Market Research, Data Analysis, and Product Strategy",
+    ],
+  },
+  {
+    degree: "Bachelor's degree in Chemistry",
+    school: "University of Indonesia",
+    period: "Sep 2019 - Jan 2023",
+    achievements: [
+      "GPA: 3.47/4.0",
+      "Majoring in Chemistry with focus on Biochemistry",
+      "Thesis: Chemical Modification of Starch Rice Flour Using Phosphate Cross Linking Method to Improve Its Functional Properties as a Material for Making Gluten-free Rice Cookies",
+      "Activities: Himpunan Mahasiswa Departemen Kimia 2020/2021",
+    ],
+  },
+  {
+    degree: "Certificate of Achievement TOEFL ITP",
+    school: "ELTI Gramedia",
+    period: "Jan 2024 - Jan 2026",
+    achievements: [
+      "Credential ID: IDN20153:1303130727:1279200",
+      "English proficiency certification",
+      "Valid until January 2026",
+    ],
+  },
+  {
+    degree:
+      "Certificate of Competencies - UI/UX Designer Virtual Internship Program",
+    school: "Qwords Cloud Web Hosting Indonesia",
+    period: "Apr 2023",
+    achievements: [
+      "Credential ID: 178369IAPAGIQ142023",
+      "Specialized in Hi-Fi Prototyping and Prototyping",
+      "UI/UX Design competencies certification",
+    ],
+  },
+];
+---
+
+<div class="space-y-8">
+  <div class="glass-strong glass-hover rounded-3xl p-8 shadow-xl animate-float">
+    <h3 class="text-2xl font-semibold mb-6 text-gray-800">Work Experience</h3>
+    <div class="space-y-6">
+      {
+        experiences.map((exp, index) => (
+          <div
+            class="glass-subtle glass-hover rounded-2xl p-6 transition-all duration-300 hover:scale-[1.01]"
+            style={`animation-delay: ${index * 0.1}s;`}
+          >
+            <div class="flex flex-col sm:flex-row justify-between items-start gap-2 mb-4">
+              <div>
+                <h4 class="text-xl font-medium text-gray-800">{exp.title}</h4>
+                <p class="text-gray-800/70">{exp.company}</p>
+              </div>
+              <span class="text-sm text-gray-800/80 glass-subtle px-4 py-2 rounded-full whitespace-nowrap border border-gray-300">
+                {exp.period}
+              </span>
+            </div>
+            <ul class="list-disc list-inside text-gray-800/70 mb-3 space-y-1 ml-4">
+              {exp.description.map((item) => (
+                <li>{item}</li>
+              ))}
+            </ul>
+            <div class="flex flex-wrap gap-2">
+              {exp.technologies.map((tech) => (
+                <span class="px-3 py-1 glass-subtle text-gray-800/80 rounded-full text-sm border border-gray-300">
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+
+  <div
+    class="glass-strong glass-hover rounded-3xl p-8 shadow-xl animate-float"
+    style="animation-delay: 0.5s;"
+  >
+    <h3 class="text-2xl font-semibold mb-6 text-gray-800">Education</h3>
+    <div class="space-y-6">
+      {
+        education.map((edu, index) => (
+          <div
+            class="glass-subtle glass-hover rounded-2xl p-6 transition-all duration-300 hover:scale-[1.01]"
+            style={`animation-delay: ${index * 0.1}s;`}
+          >
+            <div class="flex flex-col sm:flex-row justify-between items-start gap-2 mb-4">
+              <div>
+                <h4 class="text-xl font-medium text-gray-800">{edu.degree}</h4>
+                <p class="text-gray-800/70">{edu.school}</p>
+              </div>
+              <span class="text-sm text-gray-800/80 glass-subtle px-4 py-2 rounded-full whitespace-nowrap border border-gray-300">
+                {edu.period}
+              </span>
+            </div>
+            <ul class="list-disc list-inside text-gray-800/70 space-y-1 ml-4">
+              {edu.achievements.map((achievement) => (
+                <li>{achievement}</li>
+              ))}
+            </ul>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</div>

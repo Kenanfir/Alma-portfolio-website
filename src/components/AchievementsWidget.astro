@@ -1,0 +1,48 @@
+---
+interface Achievement {
+  icon: string;
+  number: string;
+  label: string;
+}
+
+const achievements: Achievement[] = [
+  {
+    icon: "",
+    number: "Apple",
+    label: "Developer Academy",
+  },
+  {
+    icon: "👥",
+    number: "10+",
+    label: "Team Members Led",
+  },
+  {
+    icon: "🏆",
+    number: "Top 7",
+    label: "Outstanding Student",
+  },
+];
+---
+
+<div
+  class="glass-strong glass-hover rounded-3xl p-8 shadow-xl text-white animate-float"
+>
+  <div
+    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center"
+  >
+    {
+      achievements.map((achievement, index) => (
+        <div
+          class="text-center glass-subtle glass-hover rounded-2xl p-6 transition-all duration-300 hover:scale-105"
+          style={`animation-delay: ${index * 0.2}s;`}
+        >
+          <span class="text-4xl mb-3 block">{achievement.icon}</span>
+          <p class="text-4xl font-bold mb-2 text-gray-800">
+            {achievement.number}
+          </p>
+          <p class="text-gray-600 text-sm font-medium">{achievement.label}</p>
+        </div>
+      ))
+    }
+  </div>
+</div>

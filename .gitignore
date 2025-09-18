@@ -1,18 +1,11 @@
-## `.gitignore` (Astro + Node)
-```gitignore
-# dependencies
-node_modules/
-.pnpm-store/
-.bun/
-
 # build output
 dist/
+
+# generated types
 .astro/
 
-# env / local
-.env
-.env.*
-!.env.example
+# dependencies
+node_modules/
 
 # logs
 npm-debug.log*
@@ -20,11 +13,12 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-# OS / editor
-.DS_Store
-Thumbs.db
-.vscode/
-.idea/
+# environment variables
+.env
+.env.production
 
-# misc
-*.local
+# macOS-specific files
+.DS_Store
+
+# jetbrains setting folder
+.idea/
