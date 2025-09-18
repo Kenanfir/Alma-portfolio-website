@@ -115,11 +115,11 @@ Coolify is a self-hosted alternative to Vercel/Netlify that gives you full contr
    - Select this portfolio repository
 
 3. **Configure build settings**:
-   - **Build Pack**: Node.js
+   - **Build Pack**: Nixpacks (automatically detects Node.js/Astro)
    - **Build Command**: `npm run build`
    - **Publish Directory**: `dist`
-   - **Node.js Version**: 20.x
-   - **Install Command**: `npm install`
+   - **Node.js Version**: 20.x (auto-detected by Nixpacks)
+   - **Install Command**: `npm install` (auto-detected by Nixpacks)
 
 4. **Environment Variables** (if needed):
    - No environment variables required for this portfolio
