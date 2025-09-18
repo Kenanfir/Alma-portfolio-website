@@ -41,6 +41,7 @@ Alma Alviana is a Chemistry graduate passionate about project and product manage
   - [Development](#development)
   - [Building for Production](#building-for-production)
 - [Deployment](#deployment)
+  - [Deploy with Coolify](#deploy-with-coolify)
   - [Deploy with Vercel](#deploy-with-vercel)
   - [Deploy with Cloudflare Pages](#deploy-with-cloudflare-pages)
 - [Tech Stack](#tech-stack)
@@ -97,6 +98,40 @@ npm run preview
 ```
 
 ## Deployment
+
+### Deploy with Coolify
+
+[![Deploy with Coolify](https://img.shields.io/badge/Deploy%20with-Coolify-blue.svg?logo=docker)](https://coolify.io)
+
+Coolify is a self-hosted alternative to Vercel/Netlify that gives you full control over your deployments.
+
+1. **Set up Coolify server**:
+   - Install Coolify on your server following their [installation guide](https://coolify.io/docs)
+   - Access your Coolify dashboard
+
+2. **Create a new project**:
+   - Click "New Project" in your Coolify dashboard
+   - Connect your GitHub repository
+   - Select this portfolio repository
+
+3. **Configure build settings**:
+   - **Build Pack**: Node.js
+   - **Build Command**: `npm run build`
+   - **Publish Directory**: `dist`
+   - **Node.js Version**: 20.x
+   - **Install Command**: `npm install`
+
+4. **Environment Variables** (if needed):
+   - No environment variables required for this portfolio
+   - Add any custom variables if you modify the project
+
+5. **Deploy**:
+   - Click "Deploy" and Coolify will automatically build and deploy your portfolio
+   - Your portfolio will be available at the provided domain
+
+6. **Custom Domain** (optional):
+   - Add your custom domain in the project settings
+   - Configure DNS records as instructed by Coolify
 
 ### Deploy with Vercel
 
